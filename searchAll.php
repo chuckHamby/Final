@@ -1,19 +1,15 @@
-<?php
-include_once "include/header.php";
-?>
-
 </doctype html>
 <html>
-    <head>
-    </head>
-    <body>
-        <div align="center"><h1><u>Search By Language</u></h1></div>
-        <form method="post" enctype="multipart/form-data">
-            Search By Language :
-            <input type="text" name="language" required>
-            <input type="submit" name="search_name" value="Search">
-        </form>
-    </body>
+<head>
+</head>
+<body>
+<div align="center"><h1><u>Search By Language</u></h1></div>
+<form method="post" enctype="multipart/form-data">
+    Search By Language :
+    <input type="text" name="language" required>
+    <input type="submit" name="search_name" value="Search">
+</form>
+</body>
 </html>
 
 <?php
@@ -22,7 +18,7 @@ include("connection.php");
 
 if(isset($_POST['search_name'])){
     $language = $_POST['language'];
-    $sql = "SELECT id, employee_name, employee_address, age, language_spoken, is_married FROM employee_data where language_spoken like '%$language%'";
+    $sql = "SELECT * FROM employee_data";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
@@ -62,5 +58,4 @@ if(isset($_POST['search_name'])){
 }
 
 echo "<br><br><a href='index.php'>Back</a>";
-include_once "include/footer.php";
 ?>

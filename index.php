@@ -1,3 +1,7 @@
+<?php
+include_once "include/header.php";
+?>
+
 <!doctype html>
     <html>
     <head>
@@ -42,3 +46,7 @@
         <a href="searchByLanguage.php"><button>Search By Language</button></a>
     </body>
 </html>
+
+<?php
+include_once "include/footer.php";
+?>

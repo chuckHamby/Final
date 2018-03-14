@@ -30,5 +30,6 @@ if (mysqli_query($conn, $sql)) {
 } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
-echo "<br><br><a href='index.php'>Back</a>";
+echo "<br><br><a href='Home.php'>Home</a>
+        <br><a href='index.php'>Add more records</a>";
 ?>
